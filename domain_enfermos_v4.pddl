@@ -269,3 +269,5 @@
                 (enfermo_ingresado ?f)
         )
 )
+
+)
