@@ -43,7 +43,7 @@
                 (loc ?a ?u)
                 (puede_recoger ?a)
                 (loc_enfermo ?e ?u)
-                (not (tiene ?e ?a))
+                (not (tiene ? ?a))
         )
 :effect
         (and
