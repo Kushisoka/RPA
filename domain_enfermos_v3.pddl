@@ -20,8 +20,10 @@
 
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;   Acciones de la Ambulancia   ;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;   Acciones de las Ambulancias   ;;;;;;;;;;;;;;;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+
 
 (:action Conducir
 :parameters     (?a - ambulancia ?u - localizacion ?w - localizacion)
