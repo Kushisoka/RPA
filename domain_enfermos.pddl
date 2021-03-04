@@ -41,7 +41,7 @@
 :precondition
         (and
                 (loc ?a ?u)
-        (puederecoger ?a)
+                (puede_recoger ?a)
                 (loc_enfermo ?e ?u)
                 (not (tiene ?e ?a))
         )
@@ -58,7 +58,7 @@
 :precondition
         (and
                 (loc ?a ?u)
-        (puededejar ?a)
+                (puede_dejar ?a)
                 (tiene ?e ?a)
         )
 :effect
