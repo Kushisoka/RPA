@@ -38,23 +38,52 @@
 )
 
 (:goal
+
         (and
-                (and (hay_hospital H l1)
-                (loc_enfermo G l1))
-                (and (hay_hospital H l2)
-                (loc_enfermo G l2))
-                (and (hay_hospital H l3)
-                (loc_enfermo G l3))
-                (and (hay_hospital H l4)
-                (loc_enfermo G l4))
-                (and (hay_hospital H l1)
-                (loc_enfermo C l1))
-                (and (hay_hospital H l2)
-                (loc_enfermo C l2))
-                (and (hay_hospital H l3)
-                (loc_enfermo C l3))
-                (and (hay_hospital H l4)
-                (loc_enfermo C l4))
+                (or
+                        (and 
+                                (hay_hospital H l1)
+                                (loc_enfermo G l1)
+                        )
+
+                        (and 
+                                (hay_hospital H l2)
+                                (loc_enfermo G l2)
+                        )
+
+                        (and 
+                                (hay_hospital H l3)
+                                (loc_enfermo G l3)
+                        )
+
+                        (and 
+                                (hay_hospital H l4)
+                                (loc_enfermo G l4)
+                        )
+                )
+
+                (or
+
+                        (and 
+                                (hay_hospital H l1)
+                                (loc_enfermo C l1)
+                        )
+
+                        (and 
+                                (hay_hospital H l2)
+                                (loc_enfermo C l2)
+                        )
+
+                        (and 
+                                (hay_hospital H l3)
+                                (loc_enfermo C l3)
+                        )
+
+                        (and 
+                                (hay_hospital H l4)
+                                (loc_enfermo C l4)
+                        )
+                )
         )
 )
 )
