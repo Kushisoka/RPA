@@ -12,7 +12,7 @@
 
         ; Localizacion ambulancia
         (loc A l1)
-        (loc A l6)
+        (loc B l6)
 
         ; Localizacion hospital
         (loc H l1)
@@ -41,6 +41,20 @@
         (link A l7 l2)
         (link A l2 l1)
         (link A l3 l4)
+
+        (link B l1 l2)
+        (link B l2 l7)
+        (link B l7 l4)
+        (link B l4 l3)
+        (link B l3 l2)
+        (link B l4 l5)
+        (link B l5 l6)
+        (link B l6 l5)
+        (link B l5 l4)
+        (link B l4 l7)
+        (link B l7 l2)
+        (link B l2 l1)
+        (link B l3 l4)
 
 
         ; Localizacion de los enfermos
