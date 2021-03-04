@@ -9,7 +9,7 @@
              (link ?a - ambulancia ?u - localizacion ?w - localizacion) ; hay un link entre la localizacion u y la w con la ambulancia a
              (tiene ?e - enfermo ?a - ambulancia) ; la ambulancia a tiene un enfermo e
              (loc_enfermo ?e - enfermo ?u - localizacion)  ; hay enfermo en la localizacion u
-
+             (llena ?a - ambulancia) ; la ambulancia a esta llena
              (puede_recoger ?a - ambulancia)
              (puede_dejar ?a - ambulancia)
 
@@ -43,10 +43,11 @@
                 (loc ?a ?u)
                 (puede_recoger ?a)
                 (loc_enfermo ?e ?u)
-                (not (tiene ? ?a))
+                (not (llena ?a))
         )
 :effect
         (and
+                (llena ?a)
                 (tiene ?e ?a)
                 (not (loc_enfermo ?e ?u))
         )
@@ -60,9 +61,11 @@
                 (loc ?a ?u)
                 (puede_dejar ?a)
                 (tiene ?e ?a)
+                (llena ?a)
         )
 :effect
         (and
+                (not (llena ?a))
                 (loc_enfermo ?e ?u)
                 (not (tiene ?e ?a))
         )
