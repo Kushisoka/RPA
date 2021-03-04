@@ -14,6 +14,7 @@
              (puede_dejar ?a - ambulancia)
 
              (hay_hospital ?u - localizacion) ; hay hospital en la localizacion u
+             (enfermo_ingresado ?e - enfermo) ; el enfermo e esta ingresado
 
 )
 
