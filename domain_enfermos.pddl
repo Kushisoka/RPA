@@ -13,7 +13,7 @@
              (puede_recoger ?a - ambulancia)
              (puede_dejar ?a - ambulancia)
 
-             (hay_hospital ?h - hospital ?u - localizacion) ; hay hospital h en la localizacion u
+             (hay_hospital ?u - localizacion) ; hay hospital en la localizacion u
 
 )
 
@@ -62,12 +62,32 @@
                 (puede_dejar ?a)
                 (tiene ?e ?a)
                 (llena ?a)
+                (not (hay_hospital ?u))
         )
 :effect
         (and
                 (not (llena ?a))
                 (loc_enfermo ?e ?u)
                 (not (tiene ?e ?a))
+        )
+)
+
+(:action Ingresar
+:parameters     (?a - ambulancia ?e - enfermo ?u - localizacion)
+:precondition
+        (and
+                (loc ?a ?u)
+                (puede_dejar ?a)
+                (tiene ?e ?a)
+                (llena ?a)
+                (hay_hospital ?u)
+        )
+:effect
+        (and
+                (not (llena ?a))
+                (loc_enfermo ?e ?u)
+                (not (tiene ?e ?a))
+                (enfermo_ingresado ?e)
         )
 )
 
